@@ -1,0 +1,4 @@
+﻿  mp_harmonic.c
+f:\otpl\otpl\src\harmonictrajectory\mp_harmonic.c(38): warning C4013: “mp_para_initial”未定义；假设外部返回 int
+  HomonicTrajectory.vcxproj -> F:\OTPL\OTPL\TestDemo\HomonicTrajectory\x64\Debug\HomonicTrajectory.exe
+  HomonicTrajectory.vcxproj -> F:\OTPL\OTPL\TestDemo\HomonicTrajectory\x64\Debug\HomonicTrajectory.pdb (Partial PDB)
