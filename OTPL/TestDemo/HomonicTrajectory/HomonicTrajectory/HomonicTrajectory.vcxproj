@@ -69,19 +69,25 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>F:\OTPL\OTPL\src\HarmonicTrajectory;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\MatlabEngineCode;D:\Program Files %28x86%29\MATLAB\matlab2016a\extern\include;..\..\..\src\HarmonicTrajectory;$(IncludePath)</IncludePath>
+    <ExecutablePath>D:\Program Files %28x86%29\MATLAB\matlab2016a\bin\win64;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>D:\Program Files %28x86%29\MATLAB\matlab2016a\extern\lib\win64\microsoft;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>F:\OTPL\OTPL\src\HarmonicTrajectory;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\MatlabEngineCode;D:\Program Files %28x86%29\MATLAB\matlab2016a\extern\include;..\..\..\src\HarmonicTrajectory;$(IncludePath)</IncludePath>
+    <ExecutablePath>D:\Program Files %28x86%29\MATLAB\matlab2016a\bin\win64;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>D:\Program Files %28x86%29\MATLAB\matlab2016a\extern\lib\win64\microsoft;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libmx.lib;libeng.lib;libmex.lib;libmat.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -89,9 +95,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libmx.lib;libeng.lib;libmex.lib;libmat.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -122,10 +130,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\HarmonicTrajectory\mp_harmonic.c" />
+    <ClCompile Include="..\..\MatlabEngineCode\MatlabEnginePlot.c" />
     <ClCompile Include="test_hamonic_main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\HarmonicTrajectory\mp_harmonic.h" />
+    <ClInclude Include="..\..\MatlabEngineCode\MatlabEnginePlot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

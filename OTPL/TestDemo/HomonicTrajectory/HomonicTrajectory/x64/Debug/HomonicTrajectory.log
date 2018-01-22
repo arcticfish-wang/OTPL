@@ -1,4 +1,4 @@
-﻿  mp_harmonic.c
-f:\otpl\otpl\src\harmonictrajectory\mp_harmonic.c(38): warning C4013: “mp_para_initial”未定义；假设外部返回 int
+﻿cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
+  test_hamonic_main.c
   HomonicTrajectory.vcxproj -> F:\OTPL\OTPL\TestDemo\HomonicTrajectory\x64\Debug\HomonicTrajectory.exe
   HomonicTrajectory.vcxproj -> F:\OTPL\OTPL\TestDemo\HomonicTrajectory\x64\Debug\HomonicTrajectory.pdb (Partial PDB)

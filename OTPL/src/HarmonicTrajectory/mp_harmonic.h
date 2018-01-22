@@ -1,45 +1,14 @@
-/*harmonic_rajectory*/
+ï»¿/*harmonic_rajectory*/
 #ifndef MP_HAMONIC_H_
 #define MP_HAMONIC_H_
 
-#ifdef __cplusplus
+#ifdef __cplusplus  
 extern "C" {
 #endif // 
 
-/**
-@brief ¹ì¼£¹æ»®½á¹¹Ìå
 
-ÓÃÓÚ´æ´¢ÊäÈë²ÎÊıºÍº¯ÊıÊä³ö½á¹û
-@para t0 ³õÊ¼Ê±¿Ì
-@para t1 ÖÕµãÊ±¿Ì
-@para T  ÔË¶¯³ÖĞøÊ±¼ä
-@para q0 ³õÊ¼Î»ÖÃ
-@para q1 ÖÕµãÎ»ÖÃ
-@para dT ²åÖµ¼ä¸ô£¨Ê±¼ä·Ö¸î£©
-@para h  Ïà¶ÔÎ»ÒÆ
-@para vs ÆğÊ¼ËÙ¶È
-@para ve ÖÕµãËÙ¶È
-@para acc ¼ÓËÙ¶È
-@para jerk ¼Ó¼ÓËÙ¶È
-@para snap ¼Ó¼Ó¼ÓËÙ¶È
-ÔË¶¯¹æ»®²ÎÊı½á¹¹Ìå
-*/
-typedef struct {
-	double t0;	
-	double t1;	
-	double T;	
-	double q0;	
-	double q1;
-	double dT;
-	double h;
-	double vs;
-	double ve;
-	double acc;
-	double jerk;
-	double snap;
-}mp_para;
 
-int mp_harmonic_traj(double *t0, double *t1, double *q0, double *q1, double *dT, mp_para *out);
+	int mp_harmonic_traj(double t0, double t1, double q0, double q1, double dT, double *data[5], int *dataNum);
 
 #ifdef __cplusplus
 }
