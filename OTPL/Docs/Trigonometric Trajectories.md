@@ -22,3 +22,7 @@ $$
 q^{(3)}(t)=-\frac{\pi^3 h}{2T^3}\text{sin}\left ( \frac{\pi(t-t_0)}{T}\right )\\
 \end{cases}
 $$
+
+example：给定条件为$t_0=0,t_1=8,q_0=0,q_1=10$，调用谐波运动规划模块（代码及测试例子保存在[OTPL](https://github.com/libing403/OTPL/tree/master/OTPL/src/HarmonicTrajectory)项目下），得到规划结果如下图所示。
+
+![谐波轨迹规划](image/example_harmonic_traj.jpg)

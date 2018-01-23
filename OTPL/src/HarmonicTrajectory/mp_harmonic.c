@@ -143,8 +143,8 @@ static int mp_data_generate(mp_para *in,double *data[6],int *dataNum)
 	data[4][0] = in->jerk;
 	data[5][0] = in->snap;
 
-	int cur_n = 1;
-	int next_n = cur_n;
+	int cur_n = 0;
+	int next_n = cur_n+1;
 
 	double w = M_PI / in->T;
 	//计算数据
@@ -155,9 +155,9 @@ static int mp_data_generate(mp_para *in,double *data[6],int *dataNum)
 		if (t_N[0] >= 1)
 		{
 			//时间大于或等于一个周期时，进行计算
-			for (int i = cur_n; i< cur_n + t_N[0]; i++)
+			for (int i = cur_n; i< cur_n + t_N[0]+1; i++)
 			{
-				tau1 = tau1 + in->dT;
+				tau1 = i*in->dT;
 				
 				//时间、位置、速度和加速度
 				data[0][i] = timeTemp + tau1;
@@ -166,7 +166,7 @@ static int mp_data_generate(mp_para *in,double *data[6],int *dataNum)
 				data[3][i] = accTemp+M_PI*M_PI*in->h/(2.0*in->T*in->T)*cos(w*tau1);
 				data[4][i] = jerkTemp + M_PI*M_PI*M_PI*in->h / (2.0*in->T*in->T*in->T)*sin(w*tau1);
 			}
-			next_n = cur_n + t_N[0];
+			next_n = cur_n + t_N[0]+1;
 		}
 
 		//计算切换点（该段的结束点）处的数据

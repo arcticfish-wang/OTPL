@@ -1,4 +1,2 @@
-﻿cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
-  test_hamonic_main.c
-  HomonicTrajectory.vcxproj -> F:\OTPL\OTPL\TestDemo\HomonicTrajectory\x64\Debug\HomonicTrajectory.exe
+﻿  HomonicTrajectory.vcxproj -> F:\OTPL\OTPL\TestDemo\HomonicTrajectory\x64\Debug\HomonicTrajectory.exe
   HomonicTrajectory.vcxproj -> F:\OTPL\OTPL\TestDemo\HomonicTrajectory\x64\Debug\HomonicTrajectory.pdb (Partial PDB)
