@@ -5,8 +5,4 @@ Trajectory Planning for Automatic Machines and Robots ;
 
 the NURBS Book;
 
-For more detail,please read the development documentation:
-
-[harmonic trajectory]()
-
-[cycloidal trajectory]()
+For more detail,please read the [OTPL wiki](https://github.com/libing403/OTPL/wiki).
