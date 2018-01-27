@@ -18,10 +18,10 @@
     <ClCompile Include="test_hamonic_main.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\HarmonicTrajectory\mp_harmonic.c">
+    <ClCompile Include="..\..\..\src\MatlabEngineCode\MatlabEnginePlot.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\MatlabEngineCode\MatlabEnginePlot.c">
+    <ClCompile Include="..\..\..\src\HarmonicTrajectory\mp_harmonic.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +29,7 @@
     <ClInclude Include="..\..\..\src\HarmonicTrajectory\mp_harmonic.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\MatlabEngineCode\MatlabEnginePlot.h">
+    <ClInclude Include="..\..\..\src\MatlabEngineCode\MatlabEnginePlot.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

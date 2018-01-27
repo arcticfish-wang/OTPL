@@ -19,14 +19,14 @@ int mat_engOpen(Engine **eg)
 	return CMMD_OK;
 }
 
-int mat_engClose(Engine *eg)
+int mat_engClose(Engine **eg)
 {
-	if (!(engClose(eg)))
+	if (!(engClose(*eg)))
 	{
 		printf("close matlab engine failed!\n");
 		return ENGCLOSE_ERR;
 	}
-	return CMMD_OK;		
+	return CMMD_OK;
 }
 
 int mat_plot(Engine *eg, double *x, double *y, int N, char *LineStyle, double LineWidth, double MarkerSize)
@@ -213,3 +213,45 @@ int mat_ylabel(Engine *eg, char *ylabel)
 	return CMMD_OK;
 }
 
+int mat_clc(Engine *eg)
+{
+	int ret;
+	char temp[CMMDTEMP] = "";
+	char command[CMMDLEN] = "clc;";
+	if ((ret = engEvalString(eg, command)) != CMMD_OK)
+	{
+		printf("\nMatlab Command error£º%s\n", command);
+		return ret;
+	}
+	return CMMD_OK;
+}
+
+int mat_clear(Engine *eg)
+{
+	int ret;
+	char temp[CMMDTEMP] = "";
+	char command[CMMDLEN] = "clear;";
+	if ((ret = engEvalString(eg, command)) != CMMD_OK)
+	{
+		printf("\nMatlab Command error£º%s\n", command);
+		return ret;
+	}
+	return CMMD_OK;
+}
+
+int mat_setgcf(Engine *eg,char *object,char *property)
+{
+	int ret;
+	char temp[CMMDTEMP] = "";
+	char command[CMMDLEN] = "set(gcf,";
+	sprintf(temp, "'%s',", property);
+	strncat(command, temp, strlen(temp));
+	sprintf(temp, "'%s');", property);
+	strncat(command, temp, strlen(temp));
+	if ((ret = engEvalString(eg, command)) != CMMD_OK)
+	{
+		printf("\nMatlab Command error£º%s\n", command);
+		return ret;
+	}
+	return CMMD_OK;
+}

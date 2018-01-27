@@ -69,12 +69,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\..\MatlabEngineCode;D:\Program Files %28x86%29\MATLAB\matlab2016a\extern\include;..\..\..\src\HarmonicTrajectory;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\..\src\MatlabEngineCode;D:\Program Files %28x86%29\MATLAB\matlab2016a\extern\include;..\..\..\src\HarmonicTrajectory;$(IncludePath)</IncludePath>
     <ExecutablePath>D:\Program Files %28x86%29\MATLAB\matlab2016a\bin\win64;$(ExecutablePath)</ExecutablePath>
     <LibraryPath>D:\Program Files %28x86%29\MATLAB\matlab2016a\extern\lib\win64\microsoft;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>..\..\MatlabEngineCode;D:\Program Files %28x86%29\MATLAB\matlab2016a\extern\include;..\..\..\src\HarmonicTrajectory;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\..\src\MatlabEngineCode;D:\Program Files %28x86%29\MATLAB\matlab2016a\extern\include;..\..\..\src\HarmonicTrajectory;$(IncludePath)</IncludePath>
     <ExecutablePath>D:\Program Files %28x86%29\MATLAB\matlab2016a\bin\win64;$(ExecutablePath)</ExecutablePath>
     <LibraryPath>D:\Program Files %28x86%29\MATLAB\matlab2016a\extern\lib\win64\microsoft;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -130,12 +130,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\HarmonicTrajectory\mp_harmonic.c" />
-    <ClCompile Include="..\..\MatlabEngineCode\MatlabEnginePlot.c" />
+    <ClCompile Include="..\..\..\src\MatlabEngineCode\MatlabEnginePlot.c" />
     <ClCompile Include="test_hamonic_main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\HarmonicTrajectory\mp_harmonic.h" />
-    <ClInclude Include="..\..\MatlabEngineCode\MatlabEnginePlot.h" />
+    <ClInclude Include="..\..\..\src\MatlabEngineCode\MatlabEnginePlot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

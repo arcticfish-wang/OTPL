@@ -1,0 +1,70 @@
+﻿cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
+  MatlabEnginePlot.c
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(50): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(53): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(55): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(61): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(63): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(64): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(67): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(68): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(69): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(70): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(109): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(112): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(114): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(120): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(122): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(123): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(126): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(127): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(128): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(129): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(175): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(176): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(191): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(192): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(206): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+f:\otpl\otpl\src\matlabenginecode\matlabengineplot.c(207): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+  test_cycloidal_main.c
+  mp_cycloidal.c
+  正在生成代码...
+MatlabEnginePlot.obj : error LNK2019: 无法解析的外部符号 _mxGetPr，该符号在函数 _mat_plot 中被引用
+MatlabEnginePlot.obj : error LNK2019: 无法解析的外部符号 _mxDestroyArray，该符号在函数 _mat_plot 中被引用
+MatlabEnginePlot.obj : error LNK2019: 无法解析的外部符号 _mxCreateDoubleMatrix_730，该符号在函数 _mat_plot 中被引用
+MatlabEnginePlot.obj : error LNK2019: 无法解析的外部符号 _mxCreateDoubleScalar，该符号在函数 _mat_plot 中被引用
+MatlabEnginePlot.obj : error LNK2019: 无法解析的外部符号 _engEvalString，该符号在函数 _mat_gridon 中被引用
+MatlabEnginePlot.obj : error LNK2019: 无法解析的外部符号 _engOpen，该符号在函数 _mat_engOpen 中被引用
+MatlabEnginePlot.obj : error LNK2019: 无法解析的外部符号 _engClose，该符号在函数 _mat_engClose 中被引用
+MatlabEnginePlot.obj : error LNK2019: 无法解析的外部符号 _engPutVariable，该符号在函数 _mat_plot 中被引用
+D:\Program Files (x86)\MATLAB\matlab2016a\extern\lib\win64\microsoft\libeng.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“X86”冲突
+D:\Program Files (x86)\MATLAB\matlab2016a\extern\lib\win64\microsoft\libmat.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“X86”冲突
+D:\Program Files (x86)\MATLAB\matlab2016a\extern\lib\win64\microsoft\libmex.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“X86”冲突
+D:\Program Files (x86)\MATLAB\matlab2016a\extern\lib\win64\microsoft\libmx.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“X86”冲突
+F:\OTPL\OTPL\TestDemo\CycloidalTrajectory\Debug\CycloidalTrajectory.exe : fatal error LNK1120: 8 个无法解析的外部命令
