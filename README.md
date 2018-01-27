@@ -7,6 +7,6 @@ the NURBS Book;
 
 For more detail,please read the development documentation:
 
-[harmonic trajectory](http://blog.csdn.net/libing403/article/details/79146361)
+[harmonic trajectory]()
 
-[cycloidal trajectory](http://blog.csdn.net/libing403/article/details/79184558)
+[cycloidal trajectory]()
