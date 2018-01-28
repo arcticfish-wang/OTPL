@@ -1,0 +1,4 @@
+﻿cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
+  test_elliptic_main.c
+  EllipticTrajectory.vcxproj -> F:\OTPL\OTPL\TestDemo\EllipticTrajectory\x64\Debug\EllipticTrajectory.exe
+  EllipticTrajectory.vcxproj -> F:\OTPL\OTPL\TestDemo\EllipticTrajectory\x64\Debug\EllipticTrajectory.pdb (Partial PDB)

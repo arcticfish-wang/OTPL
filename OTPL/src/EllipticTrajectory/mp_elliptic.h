@@ -1,7 +1,7 @@
-/*mp_cycloidal.h*/
+/*mp_elliptic.h*/
 
-#ifndef MP_CYCLOIDAL_H_
-#define MP_CYCLOIDA_H_
+#ifndef MP_ELLIPTIC_H_
+#define MP_ELLIPTIC_H_
 
 #ifdef __cplusplus  
 extern "C" {
@@ -11,13 +11,13 @@ extern "C" {
 	/**
 	@brief 摆线轨迹规划接口函数。
 
+	@para n 椭圆的长轴与短轴之比
 	@para t0,double，初始时刻。
 	@para t1,double，终止时刻。
 	@para q0,double，初始位移。
 	@para q1,double，终点位移。
 	@para dT,double，时间分割间隔。
-	@para *data[6],double，存放数据的指针数组，data[0]指向时间，data[1]指向位移，data[2]指向速度,...。对于
-	摆线轨迹只输出位移前三阶阶导数（即加加速度，高于三阶导数的值无效）
+	@para *data[6],double，存放数据的指针数组，data[0]指向时间，data[1]指向位移，data[2]指向速度,...。
 	@para *data double，指针，指向数据大小，即data[i]的元素个数。
 	@return 返回值指示函数的执行情况。
 	@retval 0,函数执行成功。
@@ -26,13 +26,14 @@ extern "C" {
 	@waring 调用该函数后必须对data指针指向的内存释放，执行以下代码：
 	for (int i = 0; i < 6; i++)
 	{
-		free(data[i]);
+	free(data[i]);
 	}
 	*/
-	int mp_cycloidal_traj(double t0, double t1, double q0, double q1, double dT, double *data[6], int *dataNum);
+	int mp_elliptic_traj(double n,double t0, double t1, double q0, double q1, double dT, double *data[6], int *dataNum);
 
 #ifdef __cplusplus
 }
 #endif // __cplusplus
 
 #endif
+

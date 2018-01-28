@@ -172,6 +172,7 @@ static int mp_data_generate(mp_para *in, double *data[6], int *dataNum)
 		//计算切换点（该段的结束点）处的数据
 		tau1 = in->Tn[0];
 		timeTemp = in->Tn[0];
+		data[0][next_n] = timeTemp;
 		DispTemp = DispTemp + in->h *(tau1 - 1.0f / (2.0 * M_PI)*sin(2 * w*tau1));
 		vecTemp = vecTemp + in->h / in->T*(1.0f - cos(2.0*w*tau1));
 		accTemp = accTemp + 2 * M_PI*in->h / (in->T*in->T)*sin(2 * w*tau1);
@@ -206,7 +207,8 @@ static int mp_data_generate(mp_para *in, double *data[6], int *dataNum)
 @para q0,double，初始位移。
 @para q1,double，终点位移。
 @para dT,double，时间分割间隔。
-@para *data[6],double，存放数据的指针数组，data[0]指向时间，data[1]指向位移，data[2]指向速度,...。
+@para *data[6],double，存放数据的指针数组，data[0]指向时间，data[1]指向位移，data[2]指向速度,...。对于
+摆线轨迹只输出位移前三阶阶导数（即加加速度，高于三阶导数的值无效）
 @para *data double，指针，指向数据大小，即data[i]的元素个数。
 @return 返回值指示函数的执行情况。
 @retval 0,函数执行成功。
