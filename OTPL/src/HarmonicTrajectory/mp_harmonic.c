@@ -172,7 +172,6 @@ static int mp_data_generate(mp_para *in,double *data[6],int *dataNum)
 		//计算切换点（该段的结束点）处的数据
 		tau1 = in->Tn[0];
 		timeTemp = in->Tn[0];
-		data[0][next_n] = timeTemp;
 		DispTemp = DispTemp + in->h / 2.0*(1.0f - cos(w*tau1));;
 		vecTemp = vecTemp + M_PI*in->h / (2.0*in->T)*sin(w*tau1);
 		accTemp = accTemp + M_PI*M_PI*in->h / (2.0*in->T*in->T)*cos(w*tau1);

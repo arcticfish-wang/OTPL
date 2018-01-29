@@ -23,6 +23,7 @@ extern "C" {
 	int mat_ylabel(Engine *eg, char *ylable);
 	int mat_clc(Engine *eg);
 	int mat_clear(Engine *eg);
+	int mat_close(Engine *eg);
 	int mat_setgcf(Engine *eg, char *object, char *property);
 #ifdef __cpluscplus
 }

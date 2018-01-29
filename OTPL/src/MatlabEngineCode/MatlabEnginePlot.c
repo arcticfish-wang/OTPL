@@ -172,7 +172,7 @@ int mat_subplot(Engine *eg,int row,int col,int n)
 	int ret;
 	char temp[CMMDTEMP] = "";
 	char command[CMMDLEN] = "subplot(";
-	sprintf(temp, "%d,%d,%d);", row, col, n);
+	sprintf(temp, "%d,%d,%d)", row, col, n);
 	strncat(command, temp, strlen(temp));
 	if ((ret = engEvalString(eg, command)) != CMMD_OK)
 	{
@@ -231,6 +231,19 @@ int mat_clear(Engine *eg)
 	int ret;
 	char temp[CMMDTEMP] = "";
 	char command[CMMDLEN] = "clear;";
+	if ((ret = engEvalString(eg, command)) != CMMD_OK)
+	{
+		printf("\nMatlab Command error£º%s\n", command);
+		return ret;
+	}
+	return CMMD_OK;
+}
+
+int mat_close(Engine *eg)
+{
+	int ret;
+	char temp[CMMDTEMP] = "";
+	char command[CMMDLEN] = "close('all');";
 	if ((ret = engEvalString(eg, command)) != CMMD_OK)
 	{
 		printf("\nMatlab Command error£º%s\n", command);

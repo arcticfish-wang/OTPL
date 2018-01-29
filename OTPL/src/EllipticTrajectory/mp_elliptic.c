@@ -99,6 +99,8 @@ static int mp_data_generate(mp_para *in, double *data[6], int *dataNum)
 	int t_N[3] = { 0 };//number of interpolation cycles of each section
 	int ret = 0;
 	int i = 0;
+	double temp1 = 0;
+	double temp2 = 0;
 	//Temporary data
 	double timeTemp = in->t0;
 	double DispTemp = in->q0;
@@ -167,15 +169,19 @@ static int mp_data_generate(mp_para *in, double *data[6], int *dataNum)
 			for (int i = cur_n; i< cur_n + t_N[0] + 1; i++)
 			{
 				tau1 = i*in->dT;
-
+				temp1 = sin(w*tau1);
+				temp2 = cos(w*tau1);
 				//时间、位置、速度和加速度
 				data[0][i] = timeTemp + tau1;
-				data[1][i] = DispTemp + in->h/2.0 *(1.0f - cos(w*tau1)/sqrt(1.0f-alpha*sin(w*tau1)*sin(w*tau1)));
-				data[2][i] = vecTemp + M_PI*in->h / (2.0f*in->T)*sin(w*tau1) / (in->n*in->n) /
-					sqrt(pow(1.0f - alpha*sin(w*tau1)*sin(w*tau1), 3));
-				data[3][i] = accTemp + M_PI * M_PI*in->h / (2.0 *in->T*in->T) / cos(w*tau1)*(1 + 2 * alpha*sin(w*tau1)*sin(w*tau1))
-					/ (in->n*in->n) / sqrt(pow(1.0f - alpha*sin(w*tau1)*sin(w*tau1), 5));
-				
+				data[1][i] = DispTemp + in->h/2.0 *(1.0f - temp2/sqrt(1.0f-alpha*temp1*temp1));
+				data[2][i] = vecTemp + w*in->h / 2.0f*temp1 / (in->n*in->n) /
+					sqrt(pow(1.0f - alpha*temp1*temp1, 3));
+				data[3][i] = accTemp + w*w*in->h / 2.0f  * temp2*(1 + 2 * alpha*temp1*temp1)
+					/ (in->n*in->n) / sqrt(pow(1.0f - alpha*temp1*temp1, 5));
+				data[4][i] = jerkTemp - w*w*w*in->h / 2.0 * temp1*(1 + 2 * alpha*temp1*temp1) / (in->n*in->n) /
+					sqrt(pow(1.0f - alpha*temp1*temp1, 5)) + w*w*w*in->h / 2.0f / (in->n*in->n)*temp2*(2.0f*alpha*temp1*temp2
+						*sqrt(pow(1.0f - alpha*temp1*temp1, 5)) + 5.0f*alpha*temp1*temp2 * (1 + 2.0f*alpha*temp1*temp1)
+						*sqrt(pow(1 - alpha*temp1*temp1, 3))) / pow(1.0f - alpha*temp1*temp1, 5);
 			}
 			next_n = cur_n + t_N[0] + 1;
 		}
@@ -183,13 +189,17 @@ static int mp_data_generate(mp_para *in, double *data[6], int *dataNum)
 		//计算切换点（该段的结束点）处的数据
 		tau1 = in->Tn[0];
 		timeTemp = in->Tn[0];
-		data[0][next_n] = timeTemp;
-		data[1][next_n] = DispTemp + in->h / 2.0 *(1.0f - cos(w*tau1) / sqrt(1.0f - alpha*sin(w*tau1)*sin(w*tau1)));
-		data[2][next_n] = vecTemp + M_PI*in->h / (2.0f*in->T)*sin(w*tau1) / (in->n*in->n) /
-			sqrt(pow(1.0f - alpha*sin(w*tau1)*sin(w*tau1), 3));
-		data[3][next_n] = accTemp + M_PI * M_PI*in->h / (2.0 *in->T*in->T) / cos(w*tau1)*(1 + 2 * alpha*sin(w*tau1)*sin(w*tau1))
-			/ (in->n*in->n) / sqrt(pow(1.0f - alpha*sin(w*tau1)*sin(w*tau1), 5));
-		
+		temp1 = sin(w*tau1);
+		temp2 = cos(w*tau1);
+		DispTemp = DispTemp + in->h / 2.0 *(1.0f - cos(w*tau1) / sqrt(1.0f - alpha*temp1*temp1));
+		vecTemp = vecTemp + M_PI*in->h / (2.0f*in->T)*temp1 / (in->n*in->n) /
+			sqrt(pow(1.0f - alpha*temp1*temp1, 3));
+		accTemp = accTemp + M_PI * M_PI*in->h / (2.0 *in->T*in->T) * temp2*(1 + 2 * alpha*temp1*temp1)
+			/ (in->n*in->n) / sqrt(pow(1.0f - alpha*temp1*temp1, 5));
+		jerkTemp = jerkTemp - w*w*w*in->h / 2.0 * temp1*(1 + 2 * alpha*temp1*temp1) / (in->n*in->n) /
+			sqrt(pow(1.0f - alpha*temp1*temp1, 5)) + w*w*w*in->h / 2.0f / (in->n*in->n)*temp2*(2.0f*alpha*temp1*temp2
+				*sqrt(pow(1.0f - alpha*temp1*temp1, 5)) + 5.0f*alpha*temp1*temp2 * (1 + 2.0f*alpha*temp1*temp1)
+				*sqrt(pow(1 - alpha*temp1*temp1, 3))) / pow(1.0f - alpha*temp1*temp1, 5);
 
 		tRemain = TnSplit[0] - t_N[0] * in->dT;
 		if (tRemain > TIME_ERR)
@@ -201,7 +211,7 @@ static int mp_data_generate(mp_para *in, double *data[6], int *dataNum)
 			data[1][next_n] = DispTemp;
 			data[2][next_n] = (vecTemp - data[2][next_n - 1]) / in->dT;
 			data[3][next_n] = (accTemp - data[3][next_n - 1]) / in->dT;
-			
+			data[4][next_n] = (jerkTemp - data[3][next_n - 1]) / in->dT;
 			next_n = next_n + 1;
 		}
 		cur_n = next_n;
